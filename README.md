@@ -22,7 +22,9 @@ Kubernetes is not the cheapest production choice for this site. The included `Do
 
 ## Edit the video list
 
-Update `videos.json`:
+Update `videos.json`.
+
+For videos hosted on YouTube:
 
 ```json
 {
@@ -46,6 +48,30 @@ the `youtubeId` is:
 ```text
 abc123XYZ00
 ```
+
+For local MP4 files, put the files in:
+
+```text
+assets/videos/
+```
+
+Then reference them from `videos.json`:
+
+```json
+{
+  "title": "Warmup Groove",
+  "description": "A short pocket-building loop for getting hands and feet moving.",
+  "src": "./assets/videos/warmup-groove.mp4",
+  "thumbnail": "./assets/images/warmup-groove.jpg",
+  "level": "beginner",
+  "tempo": "90 BPM",
+  "duration": "3:33"
+}
+```
+
+The `thumbnail` field is optional. If omitted, the site uses `assets/images/video-placeholder.svg`.
+
+For cheap hosting, YouTube/Vimeo embeds are still better for large or frequently watched videos. Local MP4 files are fine for a small practice library, but they make the Git repository larger and use your static host's bandwidth.
 
 ## Run locally
 

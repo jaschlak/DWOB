@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#071007">
+    <meta name="theme-color" content="#291b13">
     <title>DWOB Practice Library</title>
     <meta
       name="description"
@@ -12,49 +12,35 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="window-dots" aria-hidden="true">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-        </div>
-        <a class="brand" href="./"><b>dwob</b>@jordanschlak:~/practice</a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#videos">./videos</a>
-          <a href="./videos.json">./data</a>
-        </nav>
-      </div>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="DWOB home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>DWOB</strong>
+          <small>Drums Without Borders</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#videos">Practice Videos</a>
+        <a href="./videos.json">Video List</a>
+      </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy terminal-window">
-          <div class="terminal-head">
-            <span>session.sh</span>
-            <span class="live-dot">rec</span>
+        <img class="hero-image" src="./assets/images/dwob-hero.png" alt="Illustrated West African drum and dance practice scene">
+        <div class="hero-copy">
+          <p class="eyebrow">Guinea-rooted rhythm practice</p>
+          <h1 id="page-title">Drum videos for steady daily reps.</h1>
+          <p>
+            A simple phone-friendly library for Sinte, Yankadi, and future lessons from the Drums Without Borders circle.
+          </p>
+          <div class="meta-line">
+            <span>Warmups</span>
+            <span>Dance rhythms</span>
+            <span>Djembe and dunun practice</span>
           </div>
-          <div class="terminal-body">
-            <p class="prompt-line"><span class="prompt">dwob@practice:~$</span> ./load-rhythms</p>
-            <p class="kicker">Drums Without Borders</p>
-            <h2 id="page-title">Rhythm reps, queued for your phone<span class="cursor" aria-hidden="true"></span></h2>
-            <p>
-              Fast access to warmups, groove loops, and technique drills without digging through a feed.
-            </p>
-            <div class="meta-line">
-              <span><b>route</b> /dwob</span>
-              <span><b>format</b> video library</span>
-              <span><b>deploy</b> static</span>
-            </div>
-            <a class="primary-action" href="#videos">open playlist</a>
-          </div>
-        </div>
-        <div class="signal-panel" aria-hidden="true">
-          <div class="scope">
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-          </div>
-          <div class="drum-mark"></div>
+          <a class="primary-action" href="#videos">Start practicing</a>
         </div>
       </section>
 
@@ -73,7 +59,7 @@
 
       <section id="videos" class="video-section" aria-labelledby="videos-title">
         <div class="section-heading">
-          <p class="prompt-line"><span class="prompt">dwob@practice:~$</span> ls ./videos</p>
+          <p class="eyebrow">Practice library</p>
           <h2 id="videos-title">Practice Videos</h2>
           <p id="result-count"></p>
         </div>

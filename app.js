@@ -88,7 +88,7 @@ function renderVideos() {
     description.textContent = video.description || "";
     level.textContent = video.level || "practice";
     tempo.textContent = video.tempo || "";
-    img.src = video.thumbnail || `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+    img.src = video.thumbnail || getDefaultThumbnail(video);
     img.alt = `${video.title} thumbnail`;
     button.addEventListener("click", () => openVideo(video));
 
@@ -96,16 +96,34 @@ function renderVideos() {
   });
 }
 
+function getDefaultThumbnail(video) {
+  if (video.youtubeId) {
+    return `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+  }
+
+  return "./assets/images/video-placeholder.svg";
+}
+
 function openVideo(video) {
   dialogTitle.textContent = video.title;
   player.innerHTML = "";
 
-  const iframe = document.createElement("iframe");
-  iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
-  iframe.title = video.title;
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-  iframe.allowFullscreen = true;
-  player.append(iframe);
+  if (video.src) {
+    const videoEl = document.createElement("video");
+    videoEl.src = video.src;
+    videoEl.poster = video.thumbnail || "";
+    videoEl.controls = true;
+    videoEl.autoplay = true;
+    videoEl.playsInline = true;
+    player.append(videoEl);
+  } else if (video.youtubeId) {
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
+    iframe.title = video.title;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    player.append(iframe);
+  }
 
   dialog.showModal();
 }

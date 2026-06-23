@@ -1,28 +1,44 @@
 {
   "videos": [
     {
-      "title": "Warmup Groove",
-      "description": "A short pocket-building loop for getting hands and feet moving.",
-      "youtubeId": "M7lc1UVf-VE",
-      "level": "beginner",
-      "tempo": "90 BPM",
-      "duration": "3:33"
-    },
-    {
-      "title": "Subdivision Drill",
-      "description": "Practice switching subdivisions while keeping the pulse steady.",
-      "youtubeId": "M7lc1UVf-VE",
+      "title": "Sinte",
+      "description": "Practice video for the Sinte rhythm.",
+      "src": "./assets/videos/Sinte.mp4",
       "level": "intermediate",
-      "tempo": "110 BPM",
-      "duration": "3:33"
+      "tempo": "Practice",
+      "duration": ""
     },
     {
-      "title": "Accent Control",
-      "description": "Build dynamic control with alternating accents around the kit.",
-      "youtubeId": "M7lc1UVf-VE",
-      "level": "advanced",
-      "tempo": "120 BPM",
-      "duration": "3:33"
+      "title": "Yankadi Part 1",
+      "description": "First practice segment for the Yankadi rhythm.",
+      "src": "./assets/videos/yankadi_pt1.mp4",
+      "level": "beginner",
+      "tempo": "Practice",
+      "duration": ""
+    },
+    {
+      "title": "Yankadi Part 2",
+      "description": "Second practice segment for the Yankadi rhythm.",
+      "src": "./assets/videos/yankadi_pt2.mp4",
+      "level": "beginner",
+      "tempo": "Practice",
+      "duration": ""
+    },
+    {
+      "title": "Yankadi Part 3",
+      "description": "Third practice segment for the Yankadi rhythm.",
+      "src": "./assets/videos/yankadi_pt3.mp4",
+      "level": "beginner",
+      "tempo": "Practice",
+      "duration": ""
+    },
+    {
+      "title": "Yankadi Part 4",
+      "description": "Fourth practice segment for the Yankadi rhythm.",
+      "src": "./assets/videos/yankadi_pt4.mp4",
+      "level": "beginner",
+      "tempo": "Practice",
+      "duration": ""
     }
   ]
 }
