@@ -2,6 +2,12 @@
 
 Static, phone-friendly rhythm video library for `jordanschlak.com/dwob`.
 
+GitHub repository:
+
+```text
+git@github.com:jaschlak/DWOB.git
+```
+
 ## Cheapest hosting recommendation
 
 Use a static host and keep the actual video files on YouTube, Vimeo, or another video platform. Do not host raw video files in this repo unless you want bandwidth, storage, transcoding, and mobile playback costs.
@@ -66,7 +72,16 @@ docker run --rm -p 8080:80 dwob-site
 
 Recommended first deploy:
 
-1. Put this folder in a GitHub repository.
-2. Deploy it with Cloudflare Pages or GitHub Pages.
-3. Point `jordanschlak.com` DNS at the host.
-4. If you want the library at `/dwob`, either deploy the repository as a GitHub Pages project site or configure a redirect/rewrite at the host.
+1. Push this repository to `git@github.com:jaschlak/DWOB.git`.
+2. In GitHub, open Settings -> Pages.
+3. Set Build and deployment -> Source to GitHub Actions.
+4. Push to `main`.
+5. The workflow in `.github/workflows/pages.yml` will publish the site.
+
+GitHub Pages project URL:
+
+```text
+https://jaschlak.github.io/DWOB/
+```
+
+For `jordanschlak.com/dwob`, use Cloudflare Pages or CloudFront routing in front of the GitHub Pages URL, or host the built static files directly on Cloudflare Pages/AWS with that path configured.
